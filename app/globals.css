@@ -27,3 +27,15 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Force all content visible - override Framer Motion */
+section, div[class*="grid"], div[class*="space-y"], div[class*="flex"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure motion elements are visible */
+[style*="opacity:0"], [style*="opacity: 0"] {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
